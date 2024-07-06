@@ -45,9 +45,9 @@ export const CharacterController = ({ characterRotation }) => {
     }
   );
   // Camera distance limits
-  const MIN_CAMERA_DISTANCE_Y = 0.5;
+  const MIN_CAMERA_DISTANCE_Y = 0.2;
   const MAX_CAMERA_DISTANCE_Y = 1.5;
-  const MIN_CAMERA_DISTANCE_Z = -1;
+  const MIN_CAMERA_DISTANCE_Z = 0.2;
   const MAX_CAMERA_DISTANCE_Z = -40;
 
   const rb = useRef();
@@ -57,7 +57,7 @@ export const CharacterController = ({ characterRotation }) => {
   const [animation, setAnimation] = useState('idle');
 
   const characterRotationTarget = useRef(0);
-  const rotationTarget = useRef(characterRotation);
+  const rotationTarget = useRef(characterRotation || 0);
   const cameraTarget = useRef();
   const cameraPosition = useRef();
   const cameraWorldPosition = useRef(new Vector3());

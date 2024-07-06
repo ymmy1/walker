@@ -7,8 +7,10 @@ const keyboardMap = [
   { name: 'backward', keys: ['ArrowDown', 'KeyS'] },
   { name: 'left', keys: ['ArrowLeft', 'KeyA'] },
   { name: 'right', keys: ['ArrowRight', 'KeyD'] },
-  { name: 'jump', keys: ['Space'] },
+  { name: 'fly', keys: ['Space'] },
   { name: 'run', keys: ['Shift'] },
+  { name: 'zoomIn', keys: ['KeyN', 'ScrollUp'] },
+  { name: 'zoomOut', keys: ['KeyM', 'ScrollDown'] },
 ];
 
 function App() {

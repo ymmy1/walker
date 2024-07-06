@@ -5,39 +5,16 @@ import {
 } from '@react-three/drei';
 import { useControls } from 'leva';
 import { useRef } from 'react';
-import { Character } from './Character';
 import { Map } from './Map';
 import { Physics } from '@react-three/rapier';
 import { CharacterController } from './CharacterController';
-
-const maps = {
-  castle_on_hills: {
-    scale: 3,
-    position: [-6, -8, 0],
-  },
-  animal_crossing_map: {
-    scale: 20,
-    position: [-15, -1, 10],
-  },
-  city_scene_tokyo: {
-    scale: 0.72,
-    position: [0, -1, -3.5],
-  },
-  de_dust_2_with_real_light: {
-    scale: 0.7,
-    position: [-10, -6, 26],
-  },
-  medieval_fantasy_book: {
-    scale: 0.4,
-    position: [-4, 0, -6],
-  },
-};
+import { maps } from '../components/maps';
 
 export const Experience = () => {
   const shadowCameraRef = useRef();
   const { map } = useControls('Map', {
     map: {
-      value: 'castle_on_hills',
+      value: 'kyoto_japan',
       options: Object.keys(maps),
     },
   });
@@ -63,13 +40,13 @@ export const Experience = () => {
           attach={'shadow-camera'}
         />
       </directionalLight>
-      <Physics debug key={map}>
+      <Physics key={map}>
         <Map
           scale={maps[map].scale}
           position={maps[map].position}
           model={`models/${map}.glb`}
         />
-        <CharacterController />
+        <CharacterController characterRotation={maps[map].initialRotation} />
       </Physics>
     </>
   );

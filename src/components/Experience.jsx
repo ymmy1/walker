@@ -14,9 +14,20 @@ export const Experience = () => {
   const shadowCameraRef = useRef();
   const { map } = useControls('Map', {
     map: {
-      value: 'city_scene_tokyo',
+      value: 'japanese_classroom',
       options: Object.keys(maps),
     },
+  });
+
+  useControls('Hints', {
+    W: 'Move forward',
+    A: 'Move left',
+    S: 'Move backward',
+    D: 'Move right',
+    Shift: 'Run',
+    Space: 'Fly',
+    Q: 'Zoom in',
+    E: 'Zoom out',
   });
 
   return (

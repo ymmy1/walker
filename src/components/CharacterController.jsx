@@ -29,7 +29,6 @@ const lerpAngle = (start, end, t) => {
 };
 
 export const CharacterController = ({ characterRotation }) => {
-  console.log(characterRotation);
   const { WALK_SPEED, RUN_SPEED, ROTATION_SPEED, FLY_FORCE } = useControls(
     'Character Control',
     {

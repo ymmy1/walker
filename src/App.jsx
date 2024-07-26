@@ -9,8 +9,8 @@ const keyboardMap = [
   { name: 'right', keys: ['ArrowRight', 'KeyD'] },
   { name: 'fly', keys: ['Space'] },
   { name: 'run', keys: ['Shift'] },
-  { name: 'zoomIn', keys: ['KeyN', 'ScrollUp'] },
-  { name: 'zoomOut', keys: ['KeyM', 'ScrollDown'] },
+  { name: 'zoomIn', keys: ['KeyQ'] },
+  { name: 'zoomOut', keys: ['KeyE'] },
 ];
 
 function App() {
